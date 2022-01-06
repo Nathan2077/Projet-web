@@ -1,0 +1,314 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relik'meet</title>
+    <link rel="icon" href="Images/logo2.png" />
+    <link rel="stylesheet" href="Images/Logo.ico">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Magra&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<script src="https://kit.fontawesome.com/9413df3d25.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.png" class="logo"><p class="headtext">Relik'meet</p>
+    </header>
+    <div class="all">
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="#">&nbsp;&nbsp;&nbsp;Profil</a>
+            <li class="rencontrer">
+                <a href="#">❙ Rencontrer</a></li>
+            <li>
+                <a href="#">&nbsp;&nbsp;&nbsp;Messages</a>
+            </li>
+            <li>
+                <a href="#">&nbsp;&nbsp;&nbsp;Évènements</a>
+            </li>
+            <li>
+                <a href="#">&nbsp;&nbsp;&nbsp;Filtres</a>
+            </li>
+            <li>
+                <a href="#" class="premium">&nbsp;&nbsp;&nbsp;Premium</a>
+            </li>
+            <li>
+                <a href="#" class="parametres">&nbsp;&nbsp;&nbsp;Paramètres</a>
+            </li>
+        </ul>
+    </nav>
+    <article>
+        <img src="Images/Juifs/juif 1.png" class="juif1">
+    <div class="slider">
+      <div class="slides">
+        <div id="slides__1" class="slide">
+            <ul class="profil">
+                <li><h4><strong>David</strong></h4></li>
+                <li>37 ans</li>
+                <li>Paris</li>
+                <li><strong>Pratique:</strong> élevée </li>
+                <li><strong>Profession:</strong> Epicier </li>
+                <li><strong>J'aime:</strong> le sport</li>
+                <li><strong>Je n'aime pas:</strong> la mer</li>
+                <li><strong>Je recherche:</strong> une relation amicale</li>
+            </ul>
+          <a class="slide__next" href="#slides__2" title="Next"></a>
+        </div>
+        <div id="slides__2" class="slide">
+          <span class="slide__text"><strong>Bio:</strong><br>
+        Je m'appelle oui</span>
+          <a class="slide__prev" href="#slides__1" title="Prev"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="options">
+            <a href="#"><img src="Images/Croix.png" class="croix"></a>
+            <a href="#"><img src="Images/coeur.png" class="coeur"></a>
+        </div>
+    </article>
+</div>
+</body>
+</html>
+
+CSS :
+
+body {
+    margin-left: 0px;
+    font-size: 32px;
+    background-image: url("Images/fond.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.headtext {
+    margin-left: 55px;
+    margin-top: -48px;
+    font-style: italic;
+}
+
+.all
+{
+    font-family: 'Magra', sans-serif; 
+}
+
+.logo {
+    margin-left: 10px;
+    z-index: 1;
+    margin-top: 14px;
+}
+
+header 
+{
+    margin-top: -12px;
+    background-color: rgb(216, 197, 197);
+    height: 65px;
+    width:1920px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -3px;
+    background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 35px 0 8px 0px;
+    text-decoration: none;
+    padding-right: 80px;
+}
+
+.juif1
+{
+    border: 3px solid;
+    margin-top: 100px;
+    margin-left: 200px;
+    border-color: #e9c1c1;
+    border-radius: 36px;
+}
+
+li:hover a 
+{
+    color: white;
+    transform: translateY(50px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateY(50px);
+    transition: transform .4s, z-index .2s;
+}
+
+
+.premium
+{
+    color: yellow;
+}
+
+.profil 
+{
+    padding-top: -50px;
+    color: rgb(63, 63, 63);
+    list-style-type: none;
+    border: 15px solid;
+    border-color: rgb(233, 193, 193);
+    border-radius: 30px;
+    background-color: rgb(233, 193, 193);
+}
+
+.options
+{
+    margin-top: 40px;
+    margin-left: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.coeur 
+{
+    margin-left: 50px;
+}
+
+.coeurs1
+{
+    display:none;
+}
+
+.flèchedroite
+{
+    color: white;
+    margin-left: 450px;
+}
+
+div.profil ul:hover ul 
+{
+    display: none;
+}
+
+div.options a:hover  
+{
+    -webkit-filter : sepia(60%); /* Chrome, Safari, Opera */
+  filter : sepia(60%);
+}
+		
+div.options a:hover .coeurs1
+{
+    display: block;
+	transform: translateX(450px);
+	animation: wobble 3s infinite ease-in-out;
+}
+
+div.options a:hover .croix {
+    transform: translateY(50px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(50px);
+    transition: transform .4s, z-index .2s;
+}
+
+
+div.options a:hover .coeur {
+        transform: translateY(50px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(50px);
+        transition: transform .4s, z-index .2s;
+    }
+
+article 
+{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.slider {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px;
+    margin-top: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-y: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: rgb(233, 193, 193);
+    transform: scale(1);
+  }
+  
+  .profil 
+{
+    color: rgb(63, 63, 63);
+    list-style-type: none;
+    margin-top: -30px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+    padding-right: 30px;
+}
+  
+  .slide a {
+    background: none;
+    border: none;
+  }
+  
+  a.slide__prev,
+  .slider::before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+  }
+  
+  a.slide__next,
+  .slider::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+  }
+  
+  .slider::before,
+  .slider::after,
+  .slide__prev,
+  .slide__next {
+    position: absolute;
+    top: 48%;
+    width: 35px;
+    height: 35px;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+  
+  .slider::before,
+  .slider::after {
+    content: "";
+    z-index: 1;
+    background: none;
+    pointer-events: none;
+  }
